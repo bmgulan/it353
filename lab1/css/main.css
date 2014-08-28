@@ -41,8 +41,9 @@ h3 {
 }
 
 h1, h2, h3 {
-	text-align: center;
-	font-weight: 300;
+	text-align: left;
+	font-weight: 500;
+	padding-left: 20px;
 }
 
 p {
@@ -72,13 +73,9 @@ li {
 	color: #666;
 }
 
-
-.col-small {
-	width: 33%;
-	display: table-cell;
-	color: #fff;
-	padding: 20px;
-	border: 10px solid #fff;
+input {
+	font-size: 1.2em;
+	line-height: 1.5;
 }
 
 .col-small-gray {
@@ -101,8 +98,4 @@ li {
 	width: 100%;
 	display: table;
 	clear: both;
-}
-
-.orange-back{
-	background-color: #FF733B;
 }

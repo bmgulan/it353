@@ -18,7 +18,7 @@
 			var first = prompt("Please enter your first name: ");
 			var last = prompt("Please enter your last name: ");
 
-			alert("Hello" + first + " " + last + "! Welcome to IT353!");
+			alert("Hello " + last + ", " + first + "! Welcome to IT353!");
 		}
 		
 	</script>
@@ -31,23 +31,9 @@
 	<h3>Coffee enthusiast, computer scientist, and avid pursuer of awkward situations.</h3>
 	<h3> email: <a href="mailto:bmgrayb@ilstu.edu">bmgrayb@ilstu.edu</a></h3>
 
-	<h3> <a href="#about">ABOUT</a> | <a href="#questions">QUESTIONS</a> | <a href="#you">YOU</a> | <a href="#articles">ARTICLES</a></h3>
+	<h3> <a href="#about">ABOUT</a> | <a href="#pictures">PICTURES</a> | <a href="#questions">QUESTIONS</a> | <a href="#articles">ARTICLES</a> | <a href="#you">YOU</a></h3>
 
 	<hr>
-
-	<!-- pictures and gifs -->
-	<div class="row" align="center">
-		<div class="col-small-gray">
-			<img class="mvup115" src="images/hoverbike.gif" alt="the future" />
-		</div>
-		<div class="col-small-gray">
-			<img src="images/brandon.JPG" alt="Me" width=300 height=450 />
-		</div>
-		<div class="col-small-gray" >
-			<img class="mvup135" src="images/frontflip.gif" alt="woah dude" width=300 height=450 />
-		</div>
-	</div>
-
 
 	<!-- About me and Bio -->
 	<a id="about"></a>
@@ -67,7 +53,7 @@
 
 		<div class="col-small-gray">
 			<h3>SHORT BIO</h3>
-			<p> I am a Senior Computer science major at ISU. I currently have a job as an Application Developer at Country Financial. And I cannot function without copious amounts of coffee daily. Coffee &gt; everything.</p>
+			<p align="left"> I am a Senior Computer science major at ISU. I currently have a job as an Application Developer at Country Financial. And I cannot function without copious amounts of coffee daily. Coffee &gt; everything.</p>
 		</div>
 
 		<div class="col-small-gray">
@@ -81,6 +67,21 @@
 
 	</div>
 
+	<!-- pictures and gifs -->
+	<a id="pictures"></a>
+	<h1> Pictures <h1>
+	<div class="row" align="center">
+		<div class="col-small-gray">
+			<img class="mvup115" src="images/hoverbike.gif" alt="the future" />
+		</div>
+		<div class="col-small-gray">
+			<img src="images/brandon.JPG" alt="Me" width=300 height=450 />
+		</div>
+		<div class="col-small-gray" >
+			<img class="mvup135" src="images/frontflip.gif" alt="woah dude" width=300 height=450 />
+		</div>
+	</div>
+
 
 	<!-- Questions about my experience -->
 	<a id="questions"></a>
@@ -91,30 +92,19 @@
 
 		<div class="col-small-gray">
 			<h3>Any Java experience?</h3>
-			<p>Yes, <em>IT168</em>, <em>IT179</em>, and <em>IT226</em>.</p>
+			<p align="left">Yes, <em>IT168</em>, <em>IT179</em>, and <em>IT226</em>.</p>
 		</div>
 
 		<div class="col-small-gray">
 			<h3>Any Database Experience?</h3>
-			<p> Yes, I've used <em>Oracle</em>, <em>DB2</em>, and <em>MongoDB</em>. I took <em>IT378</em>, and self taught. </p>
+			<p align="left"> Yes, I've used <em>Oracle</em>, <em>DB2</em>, and <em>MongoDB</em>. I took <em>IT378</em>, and self taught. </p>
 		</div>
 
 		<div class="col-small-gray">
 			<h3>Any Web Dev Experience?</h3>
-			<p>Yes a little bit. I haven't taken any classes, however. I've used Twitter Bootstrap, Javascript/jQuery, and Impress.js. </p>
+			<p align="left">Yes a little bit. I haven't taken any classes, however. I've used Twitter Bootstrap, Javascript/jQuery, and Impress.js. </p>
 		</div>
 
-	</div>
-
-
-	<!-- javascript form -->
-	<a id="you"></a>
-	<h1> What's your name?</h1>
-	<hr>
-
-	<div class="row" align="center">
-		<!--<button onClick="sayHello()">Enter</button> -->
-		<a href="javascript:void(0)" onClick="enterName()"> HELLO </a>
 	</div>
 
 	<!-- article summaries -->
@@ -128,12 +118,12 @@
 
 		<div class="col-half-gray">
 			<h3>Google Agitates for Revolution</h3>
-			<p>This article discussed Web components and their future involvement in the web. Web components are a W3C standard designed to help organize complex Web pages by providing a mechanism to assemble them using small single-function components. The advantage of using web components is that it allows developers to compartmentalize their problems when creating web pages. The article then discussed Polymer, which is Google's library to use and extend web components. To take advantage of this technology, web developers can embbed all the libraries elements, and dependencies within a web component. Then while using the import html tag, the component can be used, and then reused again in the future. This also allows developers to use components written by others, promoting code reusability. </p>
+			<p align="left">This article discussed Web components and their future involvement in the web. Web components are a W3C standard designed to help organize complex Web pages by providing a mechanism to assemble them using small single-function components. The advantage of using web components is that it allows developers to compartmentalize their problems when creating web pages. The article then discussed Polymer, which is Google's library to use and extend web components. To take advantage of this technology, web developers can embbed all the libraries elements, and dependencies within a web component. Then while using the import html tag, the component can be used, and then reused again in the future. This also allows developers to use components written by others, promoting code reusability. </p>
 		</div>
 
 		<div class="col-half-gray">
 			<h3>Enterprise Tech in 2014</h3>
-			<p> This article discussed the 14 enterprise technologies to look for in 2014. The list included a wide range of both hardware and software technologies, varying from 3D printers to cloud computing to social business.  Some of the more interesting technologies mentioned include Internet of Things (IoT), the Quantified Enterprise, and global solutions networks. IoT discusses how all sorts of products will soon be network connected. The Quantified Enterprise is about how using big data analytics will lead to everything that can be measured will be measured.  This will allow for better business insights and understanding. Global solutions networks allow companies to utilize digital communities and mass collaboration to tackle large problems. </p>
+			<p align="left"> This article discussed the 14 enterprise technologies to look for in 2014. The list included a wide range of both hardware and software technologies, varying from 3D printers to cloud computing to social business.  Some of the more interesting technologies mentioned include Internet of Things (IoT), the Quantified Enterprise, and global solutions networks. IoT discusses how all sorts of products will soon be network connected. The Quantified Enterprise is about how using big data analytics will lead to everything that can be measured will be measured.  This will allow for better business insights and understanding. Global solutions networks allow companies to utilize digital communities and mass collaboration to tackle large problems. </p>
 		</div>
 
 	</div>
@@ -143,12 +133,12 @@
 
 		<div class="col-half-gray">
 			<h3>Mashups, the new breed of Web App</h3>
-			<p>Answer</p>
+			<p align="left">Answer</p>
 		</div>
 
 		<div class="col-half-gray">
 			<h3>Dirty Little Secrets of Search</h3>
-			<p> Answer </p>
+			<p align="left"> Answer </p>
 		</div>
 
 	</div>
@@ -158,12 +148,12 @@
 
 		<div class="col-half-gray">
 			<h3>Man Who Wants to Translate Web</h3>
-			<p>This article discussed a new tool called Duolingo, created by Luis von Ahn and Severin Hacker.  The article states that 50% of the world's web pages are in English; this poses a problem for countries with a developing internet presence.  The goal of Duolingo is to tranlate every web page into every language. However, this is quite a daunting task both in the cost, as well as the sheer amount of people and time required to do this. To overcome this problem, Duolingo is taking advantage of people wanting to learn a new language. In this language training course, Duolingo has many individuals translate sentences from real web pages. It then takes the best translation, and uses that on its translated page. This way it ensures that it gets the best translation, as well as keeping the software to learn a new language 100% free. </p>
+			<p align="left">This article discussed a new tool called Duolingo, created by Luis von Ahn and Severin Hacker.  The article states that 50% of the world's web pages are in English; this poses a problem for countries with a developing internet presence.  The goal of Duolingo is to tranlate every web page into every language. However, this is quite a daunting task both in the cost, as well as the sheer amount of people and time required to do this. To overcome this problem, Duolingo is taking advantage of people wanting to learn a new language. In this language training course, Duolingo has many individuals translate sentences from real web pages. It then takes the best translation, and uses that on its translated page. This way it ensures that it gets the best translation, as well as keeping the software to learn a new language 100% free. </p>
 		</div>
 
 		<div class="col-half-gray">
 			<h3>Google Will Search Before You Ask</h3>
-			<p> Answer </p>
+			<p align="left"> Answer </p>
 		</div>
 
 	</div>
@@ -173,14 +163,24 @@
 
 		<div class="col-half-gray">
 			<h3>Internet Still Reshaping History</h3>
-			<p>Answer</p>
+			<p align="left">Answer</p>
 		</div>
 
 		<div class="col-half-gray">
 			<h3>SPDY: Experimental Protocal</h3>
-			<p> Answer </p>
+			<p align="left"> Answer </p>
 		</div>
 
+	</div>
+
+	<!-- javascript button -->
+	<a id="you"></a>
+	<h1> What's your name?</h1>
+	<hr>
+
+	<div class="row" align="center">
+		<input type="button" value="SAY HELLO" onclick="enterName()">
+		<!--<a href="javascript:void(0)" onClick="enterName()"> HELLO </a> -->
 	</div>
 
 	<hr>
