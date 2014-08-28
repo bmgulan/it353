@@ -1,66 +1,70 @@
-<html>
+<!doctype html>
 <head>
 
-<meta name="title" content="LAB 1 PAGE">
-<meta name="description" content="This is an about me page">
-<meta name="author" content="Brandon Graybeal">
-<meta name="keywords" content="">
+	<meta name="title" content="LAB 1 PAGE">
+	<meta name="description" content="This is an about me page">
+	<meta name="author" content="Brandon Graybeal">
+	<meta name="keywords" content="it 353, lab 1, about me, web development">
 
-<title>Lab #1</title>
+	<title>Lab #1 --  My Home Page</title>
+
+	<!-- css -->
+	<link href="css/main.css" rel="stylesheet">
 </head>
-<body>
 
-<h1>About Me</h1>
-<img src="images/brandon.JPG" alt="Me" width=300 height=400 />
+<body style="background-color:#fff;">
 
-<table style="width:300px">
+	<h1>Brandon Graybeal</h1>
+	<h3>Coffee enthusiast, computer scientist, and avid pursuer of awkward situations.</h3>
+	<h3> <a href="#about">ABOUT</a> | <a href="#questions">QUESTIONS</a> | <a href="#you">YOU</a> </h3>
 
-<tr>
-	<th> Contact Info </th>
-	<th> FILLER </th>
-	<th> FILLER</th>
-</tr>
+	<hr>
 
-<tr>
-	<ul>
-		<li>Name: Brandon Graybeal</li>
-		<li>Email: bmgrayb@ilstu.edu</li>
-	</ul>
-</tr>
+	<div class="row" align="center">
+		<div class="col-small orange-back">
+			<img class="mvup115" src="images/hoverbike.gif" alt="the future" />
+		</div>
+		<div class="col-small orange-back">
+			<img src="images/brandon.JPG" alt="Me" width=300 height=450 />
+		</div>
+		<div class="col-small orange-back" >
+			<img class="mvup135" src="images/frontflip.gif" alt="woah dude" width=300 height=450 />
+		</div>
+	</div>
 
-</table>
+	<a id="about"></a>
+	<h1> About Me </h1>
+	<hr>
 
-<!--
-<h3>
-Lab #1
-</h3>
-<p>
-Blah-Blah-Blah (put appropriate contents here)
-</p>
-<p>
-<strong>Java vs. C# Programming</strong><br/>
-<br/>
-</p>
-Q0:
-<pre>
-<code>
-C#:                                                     Java:
-namespace ConsoleApplication1                          // package consoleapplication1;
-{
-    class Program                                      // class Program
-    {
-        static void Main(string[] args)                // public static void main(String[] args)
-        {
-            System.Console.WriteLine("Hello World!");  // System.out.println("Hello World!");
-        }
-    }
-}
-</code>
-</pre>
-<p/>
-Output of the program: <br />
-<img src="output1.jpg" alt="output" />
--->
+	<div class="row" align="center">
+
+		<div class="col-small">
+			<h3>FAVE SITES</h3>
+			<ol>
+				<li><a href="http://www.reddit.com"> Reddit</a></li>
+				<li><a href="http://www.twitter.com"> Twitter</a></li>
+				<li><a href="http://www.wired.com"> Wired</a></li>
+			</ol>
+		</div>
+
+		<div class="cold-small">
+			<h3>SHORT BIO</h3>
+			<p> I am a Senior Computer science major at ISU. I currently have a job as an Application Developer at Country Financial. And I cannot function without copious amounts of coffee daily.</p>
+		</div>
+
+		<div class="col-small">
+			<h3>HOBBIES</h3>
+		</div>
+
+	</div>
+
+	<a id="questions"></a>
+	<h1>Questions?</h1>
+	<hr>
+
+	<a id="you"></a>
+	<h1> What's your name?</h1>
+	<hr>
 
 </body>
 </html>
