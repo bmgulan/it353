@@ -1,4 +1,5 @@
 <!doctype html>
+<html>
 <head>
 
 	<meta name="title" content="LAB 1 PAGE">
@@ -99,6 +100,10 @@
 	<h1> What's your name?</h1>
 	<hr>
 
+	<div class="row" align="center">
+		<button onclick="enterName()">Enter</button>
+	</div>
+
 	<!-- article summaries -->
 	<a id="articles"></a>
 	<h1>Articles</h1>
@@ -110,12 +115,12 @@
 
 		<div class="col-half-gray">
 			<h3>Google Agitates for Revolution</h3>
-			<p>Answer</p>
+			<p>This article discussed Web components and their future involvement in the web. Web components are a W3C standard designed to help organize complex Web pages by providing a mechanism to assemble them using small single-function components. The advantage of using web components is that it allows developers to compartmentalize their problems when creating web pages. The article then discussed Polymer, which is Google's library to use and extend web components. To take advantage of this technology, web developers can embbed all the libraries elements, and dependencies within a web component. Then while using the import html tag, the component can be used, and then reused again in the future. This also allows developers to use components written by others, promoting code reusability. </p>
 		</div>
 
 		<div class="col-half-gray">
 			<h3>Enterprise Tech in 2014</h3>
-			<p> Answer </p>
+			<p> This article discussed the 14 enterprise technologies to look for in 2014. The list included a wide range of both hardware and software technologies, varying from 3D printers to cloud computing to social business.  Some of the more interesting technologies mentioned include Internet of Things (IoT), the Quantified Enterprise, and global solutions networks. IoT discusses how all sorts of products will soon be network connected. The Quantified Enterprise is about how using big data analytics will lead to everything that can be measured will be measured.  This will allow for better business insights and understanding. Global solutions networks allow companies to utilize digital communities and mass collaboration to tackle large problems. </p>
 		</div>
 
 	</div>
@@ -140,7 +145,7 @@
 
 		<div class="col-half-gray">
 			<h3>Man Who Wants to Translate Web</h3>
-			<p>Answer</p>
+			<p>This article discussed a new tool called Duolingo, created by Luis von Ahn and Severin Hacker.  The article states that 50% of the world's web pages are in English; this poses a problem for countries with a developing internet presence.  The goal of Duolingo is to tranlate every web page into every language. However, this is quite a daunting task both in the cost, as well as the sheer amount of people and time required to do this. To overcome this problem, Duolingo is taking advantage of people wanting to learn a new language. In this language training course, Duolingo has many individuals translate sentences from real web pages. It then takes the best translation, and uses that on its translated page. This way it ensures that it gets the best translation, as well as keeping the software to learn a new language 100% free. </p>
 		</div>
 
 		<div class="col-half-gray">
@@ -172,5 +177,24 @@
 			--Oscar Wilde
 	</pre>
 
+
+	<script>
+
+		function enterName(){
+			var firstName = prompt("Please enter your first name: ");
+			var lastName = prompt("Please enter your last name: ");
+
+			alert("Hello " + firstName + " " + lastName "! Welcome to IT353!");
+		}
+
+	</script>
+
 </body>
 </html>
+
+
+
+
+
+
+
