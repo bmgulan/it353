@@ -51,6 +51,12 @@ p {
 	font-size: 1.2em;
 }
 
+pre {
+	color: 666;
+	line-height: : 1.5;
+	font-size: 1.2em;
+}
+
 a:link {
 	text-decoration: none;
 	color: #666;
@@ -73,6 +79,22 @@ li {
 	color: #fff;
 	padding: 20px;
 	border: 10px solid #fff;
+}
+
+.col-small-gray {
+	width: 33%;
+	display: table-cell;
+	color: #FF733B;
+	padding: 20px;
+	border: 10px solid #FF733B;
+}
+
+.col-half-gray {
+	width: 50%;
+	display: table-cell;
+	color: #FF733B;
+	padding: 20px;
+	border: 10px solid #FF733B;
 }
 
 .row {
