@@ -12,59 +12,6 @@
 	<!-- css -->
 	<link href="css/main.css" rel="stylesheet">
 
-	<!--
-	<script type="text/javascript" src="javascript/allScripts.js"></script>
-	-->
-
-	<!--
-	<script>
-	function enterName() {
-			var first = prompt("Please enter your first name: ");
-			var last = prompt("Please enter your last name: ");
-
-			alert("Hello " + last + ", " + first + "! Welcome to IT353!");
-	}
-	</script>
-
-	<script type="text/javascript">
-	function calculateScores() {
-
-		var numScores = prompt("Enter the number of scores: ");
-
-		alert("Scores: " + numScores);
-		var curr = 0;
-		var i;
-		for(i = 0; i < numScores; i++){
-			curr += prompt("Enter score: ");
-
-		}
-
-		alert(curr);
-		/*
-		var i;
-		var scores;
-		var min;
-		var max;
-		
-
-		for(i = 0; i < numScores; i++){
-			var curr = prompt("Enter score number " + i ": ");
-
-			scores += curr;
-			if(curr > max)
-				max = curr;
-
-			if(curr < min)
-				min = curr;
-
-		}
-		*/
-		var results = "Lowest: " + min + "\nHighest: " + max + "\nAverage: " + scores/numScores;
-		
-	}
-	</script>	
--->
-
 </head>
 
 <body>
@@ -75,7 +22,7 @@
 
 	<hr>
 
-	<div class="h3-center"> <a href="#about">ABOUT</a> | <a href="#pictures">PICTURES</a> | <a href="#questions">QUESTIONS</a> | <a href="#articles">ARTICLES</a> | <a href="#js">JAVASCRIPT</a></div>
+	<div class="h3-center"> <a href="#about">ABOUT</a> | <a href="#pictures">PICTURES</a> | <a href="#questions">Q'S 1.0</a> | <a href="#articles">ARTICLES</a> | <a href="#js">JAVASCRIPT</a> | <a href="#forms">FORMS </a> | <a href="#questions2">Q'S 2.0 </a></div>
 
 	<!--
 	<div class="h3-center" align="center"> <a href="#about">ABOUT</a> | <a href="#pictures">PICTURES</a> | <a href="#questions">QUESTIONS</a> | <a href="#articles">ARTICLES</a> | <a href="#you">YOU</a></div>
@@ -85,7 +32,7 @@
 
 	<!-- About me and Bio -->
 	<a id="about"></a>
-	<h1> About Me </h1>
+	<h1> ABOUT ME </h1>
 	<hr>
 
 	<div class="row" align="center">
@@ -117,7 +64,7 @@
 
 	<!-- pictures and gifs -->
 	<a id="pictures"></a>
-	<h1> Pictures <h1>
+	<h1> PICTURES <h1>
 	<div class="row" align="center">
 		<div class="col-small-gray">
 			<img class="mvup115" src="images/hoverbike.gif" alt="the future" />
@@ -133,7 +80,7 @@
 
 	<!-- Questions about my experience -->
 	<a id="questions"></a>
-	<h1>Questions?</h1>
+	<h1>QUESTIONS 1.0</h1>
 	<hr>
 
 	<div class="row" align="center">
@@ -157,7 +104,7 @@
 
 	<!-- article summaries -->
 	<a id="articles"></a>
-	<h1>Articles</h1>
+	<h1>ARTICLES</h1>
 
 	<hr>
 
@@ -248,16 +195,59 @@
 	<div class="row" align="center">
 
 		<div class="col-half-gray">
-			<div class="h3-center"> ENTER PAGE SCRIPT </div>
+			<div class="h3-center"> CALCULATE PAY SCRIPT </div>
 			<br>
-			<input type="button" value="ENTER TIME" onclick="enterName()"></input>
+			<input type="button" value="CALCULATE PAY" onclick="calculatePay()"></input>
 		</div>
 
 		<div class="col-half-gray">
 			<div class="h3-center"> WEB PAGE BASED ON TIME SCRIPT</div>
 			<br>
 		<!--<a href="javascript:void(0)" onClick="calculateScores()"> SCORES </a> -->
-		<input type="button" value="FIND PAGE" onclick="calculateScores()"></input>
+		<input type="button" value="FIND PAGE" onclick="displaySites()"></input>
+		</div>
+
+	</div>
+
+	<hr>
+
+	<!-- javascript button -->
+	<a id="forms"></a>
+	<h1> FORMS </h1>
+	<hr>
+
+	<!-- name and scores -->
+	<div class="row" align="center">
+
+		<div class="col-half-gray">
+			<div class="h3-center"> FIRST FORM </div>
+			<br>
+		</div>
+
+		<div class="col-half-gray">
+			<div class="h3-center"> SECOND FORM </div>
+			<br>
+		</div>
+
+	</div>
+
+	<br>
+
+	<a id="questions2"></a>
+	<h1> QUESTIONS 2.0 </h1>
+	<hr>
+
+	<!-- name and scores -->
+	<div class="row" align="center">
+
+		<div class="col-half-gray">
+			<div class="h3-center"> FIRST ANSWER </div>
+			<br>
+		</div>
+
+		<div class="col-half-gray">
+			<div class="h3-center"> SECOND ANSWER </div>
+			<br>
 		</div>
 
 	</div>
@@ -274,7 +264,6 @@
 
 
 	<!-- javascript -->
-
 	<!-- This function allows the user to input their first and last name, and greets them. -->
 	<script>
 	function enterName() {
@@ -284,7 +273,7 @@
 			alert("Hello " + last + ", " + first + "! Welcome to IT353!");
 	}
 	</script>
-
+	
 	<!-- This is the function to allow the user to input scores, and return the min, max, average, and total above average -->
 	<script type="text/javascript">
 	function calculateScores() {
@@ -323,6 +312,49 @@
 	}
 	</script>	
 
+	<!-- This function displays one site during business hours, and a different one any other time -->
+	<script type="text/javascript">
+
+		function displaySites() {
+
+			now = new Date();
+
+			var time = now.getUTCHours();
+			if(time >= 7 && time < 16){
+				location = "http://CNN.com";
+			}
+			else{
+				location = "http://reddit.com"
+			}
+
+		}
+
+	</script>
+
+	<!-- Tihs function will compute the pay for an employee -->
+	<script type="text/javascript">
+
+	function calculatePay(){
+
+		var name = prompt("Please enter your name: ");
+		var ssn = prompt("Please enter your SSN: ");
+		var rate = parseFloat(prompt("Please enter your pay rate: "));
+		var hours = parseFloat(prompt("Please enter the number of hours worked: "));
+
+		var total;
+
+		if(hours > 40){
+			total = (40 * rate) + ((hours - 40) * rate * 1.5);
+		}
+		else{
+			total = hours * rate;
+		}
+
+		alert("Total pay for " + name + " is: $" + total);
+
+	}
+
+	</script>
 
 </body>
 </html>
