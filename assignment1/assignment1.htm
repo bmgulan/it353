@@ -12,6 +12,34 @@
 	<!-- css -->
 	<link href="css/main.css" rel="stylesheet">
 
+	<!-- script to change css --> 
+	<script type="text/javascript">
+      function changeCSS(cssFile, cssLinkIndex) {
+ 
+        var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
+ 
+        var newlink = document.createElement("link")
+        newlink.setAttribute("rel", "stylesheet");
+        newlink.setAttribute("type", "text/css");
+        newlink.setAttribute("href", cssFile);
+ 
+        document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+      }
+    </script>
+
+    <!-- script to write all the age options -->
+	<script>
+
+		function listAges(){
+			var i;
+
+			for(i = 1; i <= 100; i++){
+				document.write("<option value=" + i + ">" + i + "</option>");
+			}
+		}
+
+	</script>
+
 </head>
 
 <body>
@@ -19,10 +47,13 @@
 	<h1>Brandon Graybeal</h1>
 	<h3>Coffee enthusiast, computer scientist, and avid pursuer of awkward situations.</h3>
 	<h3> email: <a href="mailto:bmgrayb@ilstu.edu">bmgrayb@ilstu.edu</a></h3>
+	<input type="button" value="Main CSS" onclick="changeCSS('css/main.css', 0);"></input>
+	<input type="button" value="New CSS" onclick="changeCSS('css/alternate.css', 0);"></input>
+
 
 	<hr>
 
-	<div class="h3-center"> <a href="#about">ABOUT</a> | <a href="#pictures">PICTURES</a> | <a href="#questions">Q'S 1.0</a> | <a href="#articles">ARTICLES</a> | <a href="#js">JAVASCRIPT</a> | <a href="#forms">FORMS </a> | <a href="#questions2">Q'S 2.0 </a></div>
+	<div class="h3-center"> <a href="#about">ABOUT</a> | <a href="#pictures">PICTURES</a> | <a href="#questions">Q'S 1.0</a> | <a href="#articles">ARTICLES</a> | <a href="#js">JAVASCRIPT</a> | <a href="#forms">FORMS </a> | <a href="#html5">HTML5 </a> | <a href="#questions2">Q'S 2.0 </a></div>
 
 	<!--
 	<div class="h3-center" align="center"> <a href="#about">ABOUT</a> | <a href="#pictures">PICTURES</a> | <a href="#questions">QUESTIONS</a> | <a href="#articles">ARTICLES</a> | <a href="#you">YOU</a></div>
@@ -211,7 +242,7 @@
 
 	<hr>
 
-	<!-- javascript button -->
+	<!-- forms -->
 	<a id="forms"></a>
 	<h1> FORMS </h1>
 	<hr>
@@ -220,13 +251,97 @@
 	<div class="row" align="center">
 
 		<div class="col-half-gray">
-			<div class="h3-center"> FIRST FORM </div>
+			<div class="h3-center"> EchoAll FORM</div>
 			<br>
+
+			<form align="left" name="exampleEcho" method="get" action="http://was6.itk.ilstu.edu:9080/itk/EchoAll">
+
+				<h3>Select year: </h3>
+				<input type="radio" name="Year" value="freshmen" onclick="exampleEcho.catalog.value = 'Freshmen'"> Freshmen<br>
+				<input type="radio" name="Year" value="sophomore" onclick="exampleEcho.catalog.value = 'Sophomore'"> Sophomore<br>
+				<input type="radio" name="Year" value="junior" onclick="exampleEcho.catalog.value = 'Junior'"> Junior<br>
+				<input type="radio" name="Year" value="senior" onclick="exampleEcho.catalog.value = 'Senior'"> Senior<br>
+				<br>
+
+				<h3>Ice Cream Flavor: </h3>
+				<input type="checkbox" name="Flavor" value="Chocolate" onclick="exampleEcho.catalog.value='Chocolate'"> Chocolate <br>
+				<input type="checkbox" name="Flavor" value="Vanilla" onclick="exampleEcho.catalog.value='Chocolate'"> Vanilla <br>
+				<input type="checkbox" name="Flavor" value="Mint Chocolate Chip" onclick="exampleEcho.catalog.value='Chocolate'"> Mint Chocolate Chip <br>
+				<input type="checkbox" name="Flavor" value="Rocky Road" onclick="exampleEcho.catalog.value='Chocolate'"> Rocky Road <br>
+	
+				<input type="submit">
+
+			</form>
+
 		</div>
 
 		<div class="col-half-gray">
-			<div class="h3-center"> SECOND FORM </div>
+			<div class="h3-center"> INFO FORM </div>
 			<br>
+
+			<form align="left" onsubmit="validate()">
+
+				Name: <input type="text" name="name"><br><br>
+
+				<input type="radio" name="gender" value="male" onclick="" > Male<br>
+				<input type="radio" name="gender" value="female" onclick=""> Female<br>
+				<input type="radio" name="gender" value="neither" onclick=""> Do Not Disclose<br><br>
+
+				Email: <input name="email" type="email" placeholder="someone@example.com" align="left" /> <br><br>
+
+				Zip Code: <input type="text" name="zip"><br><br>
+
+				Age: <select name="age"> <script> listAges()</script> </select><br><br>
+
+				<input type="submit">
+
+			</form>
+
+		</div>
+
+	</div>
+
+	<br>
+
+	<!-- HTML 5 stuff -->
+	<a id="html5"></a>
+	<h1> HTML 5 STUFF </h1>
+	<hr>
+
+	<!-- name and scores -->
+	<div class="row" align="center">
+
+		<div class="col-small-gray">
+			<div class="h3-center"> GeoLocation</div>
+			<br>
+
+			<p id="demo">Click the button to get your coordinates:</p>
+
+			<button onclick="getLocation()">Try It</button>
+
+		</div>
+
+		<div class="col-small-gray">
+			<div class="h3-center"> Editable Content </div>
+			<br>
+
+			<h3> Editable List </h3>
+			<ul contenteditable="true" align="left">
+		        <li> You can type whatever you want here. </li>
+		        <li> Go ahead and try.</li>
+		        <li> Milkshakes </li>
+     		</ul>
+
+		</div>
+
+		<div class="col-small-gray" align="left">
+			<div class="h3-center"> Form Placeholder </div>
+			<br>
+
+			<h3> Example Placeholder </h3>
+			<p> This use to take a bit of JS to create placeholders for textboxes.</p>
+			<input name="email" type="email" placeholder="someone@example.com" align="left" />
+
 		</div>
 
 	</div>
@@ -241,15 +356,121 @@
 	<div class="row" align="center">
 
 		<div class="col-half-gray">
-			<div class="h3-center"> FIRST ANSWER </div>
+			<div class="h3-center"> WHAT DOES ARIA STAND FOR? </div>
 			<br>
 		</div>
 
 		<div class="col-half-gray">
-			<div class="h3-center"> SECOND ANSWER </div>
+			<div class="h3-center"> WHAT IS SEARCH ENGINE OPTIMIZATION? </div>
 			<br>
 		</div>
 
+	</div>
+
+	<div class="row" align="center">
+
+		<div class="col-half-gray">
+			<div class="h3-center"> WHAT IS CLOUD COMPUTING? </div>
+			<br>
+		</div>
+
+		<div class="col-half-gray">
+			<div class="h3-center"> WHAT IS A LAMP STACK? </div>
+			<br>
+		</div>
+
+	</div>
+
+	<div class="row" align="center">
+
+		<div class="col-half-gray">
+			<div class="h3-center"> WHAT IS A WEB FRAMEWORK? </div>
+			<br>
+		</div>
+
+	</div>
+
+	<br>
+
+	<div align="center">
+
+		<div class="h2-center"> Utilities (2014) </div>
+
+		<table>
+
+			<tr>
+		    <th>Month</th>
+		    <th>Water/Trash Bill</th>
+		    <th>Electricity</th>
+		    <th>Gas</th>
+		  </tr>
+		  <tr>
+		    <td>January</td>
+		   	<td rowspan="2">$50</td>
+		    <td>$100</td>
+		    <td>$100</td>
+		  </tr>
+		  <tr>
+		    <td>February</td>
+		    <td>$80</td>
+		    <td>$100</td>
+		  </tr>
+		  <tr>
+		    <td>March</td>
+		    <td rowspan="2">$50</td>
+		    <td>$100</td>
+		    <td>$100</td>
+		  </tr>
+		  <tr>
+		    <td>April</td>
+		    <td>$80</td>
+		    <td>$100</td>
+		  </tr>
+		  <tr>
+		    <td>May</td>
+		    <td rowspan="2">$50</td>
+		    <td>$100</td>
+		    <td>$100</td>
+		  </tr>
+		  <tr>
+		    <td>June</td>
+		    <td>$80</td>
+		    <td>$100</td>
+		  </tr>
+		  <tr>
+		    <td>July</td>
+		    <td rowspan="2">$50</td>
+		    <td>$100</td>
+		    <td>$100</td>
+		  </tr>
+		  <tr>
+		    <td>August</td>
+		    <td>$80</td>
+		    <td>$100</td>
+		  </tr>
+		  <tr>
+		    <td>September</td>
+		    <td rowspan="2">$50</td>
+		    <td>$100</td>
+		    <td>$100</td>
+		  </tr>
+		  <tr>
+		    <td>October</td>
+		    <td>$80</td>
+		    <td>$100</td>
+		  </tr>
+		  <tr>
+		    <td>November</td>
+		    <td rowspan="2">$50</td>
+		    <td>$100</td>
+		    <td>$100</td>
+		  </tr>
+		  <tr>
+		    <td>December</td>
+		    <td>$80</td>
+		    <td>$100</td>
+		  </tr>
+		</table>
 	</div>
 
 	<br>
@@ -353,6 +574,31 @@
 		alert("Total pay for " + name + " is: $" + total);
 
 	}
+
+	</script>
+
+	<!-- GeoLocation script -->
+	<script>
+	var x = document.getElementById("demo");
+
+	function getLocation() {
+	    if (navigator.geolocation) {
+	        navigator.geolocation.getCurrentPosition(showPosition);
+	    } else { 
+	        x.innerHTML = "Geolocation is not supported by this browser.";
+	    }
+	}
+
+	function showPosition(position) {
+	    x.innerHTML="Latitude: " + position.coords.latitude + 
+	    "<br>Longitude: " + position.coords.longitude;	
+	}
+	</script>
+
+	<!-- script to validate info on form -->
+	<script>
+
+		alert("Everything looks good boss");
 
 	</script>
 

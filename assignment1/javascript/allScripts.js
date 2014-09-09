@@ -8,23 +8,37 @@ function enterName() {
 
 //Number 2, script to calculate test scores
 function calculateScores() {
-	var numScores = prompt("Enter the number of scores: ");
 
-	var i, scores, min, max;
+		var numScores = parseInt(prompt("Enter total number of scores: "));
 
-	for(i = 0; i < numScores; i++){
-		var curr = prompt("Enter score number " + i ": ");
+		var total = 0;
+		var max = Number.MIN_VALUE;
+		var min = Number.MAX_VALUE;
+		var i;
+		var scores = [];
 
-		scores += curr;
-		if(curr > max)
-			max = curr;
+		for(i = 0; i < numScores; i++){
+			scores[i] = parseInt(prompt("Enter score: " ));
+			total += scores[i];
 
-		if(curr < min)
-			min = curr;
+			if(scores[i] > max)
+				max = scores[i];
 
+			if(scores[i] < min)
+				min = scores[i];
+		}
+
+		var average = total/numScores;
+		var aboveAverageIndex = 0;
+		scores.sort();
+
+		while(average < scores[aboveAverageIndex]){
+			aboveAverageIndex++;
+		}
+
+		var results = "Lowest: " + min + "\nHighest: " + max + "\nAverage: " + average + "\nScores higher than average: " + parseInt(aboveAverageIndex + 1);
+		alert(results);
+		
+		
 	}
-
-	var results = "Lowest: " + min + "\nHighest: " + max + "\nAverage: " + scores/numScores;
-
-}
 		
