@@ -13,5 +13,57 @@
 
 <body>
 
+	<h1> QUESTIONS </h1>
+
+	<ol>
+		<li>What is the purpose of using the NumberFormat class in the app?</li>
+			<ul>
+				<li><p>The purpose of the NumberFormat class in this app is to format the numbers as a currency instance so it appears as a monetary value.</p></li>
+			</ul>
+		<li>What data structure is used to model a shopping cart and what is the initial capacity of this data structure?</li>
+			<ul>
+				<li><p>The data structure being modeled is an ArrayList using the standard array in java. The initial size of the array is 3.</p></li>
+			</ul>
+		<li>When a shopping cart reaches its initial capacity, what happens?</li>
+			<ul>
+				<li><p>When the shopping cart is full, the <em>increaseSize()</em> method is called. This method first creates a new, temporary array that is the same size as the shopping cart. It then copies over the current shoping cart into it. Then the shopping cart 
+					size is increased by 2. Finally, the contents of the temporary array is copied over to the shopping cart. </p></li>
+			</ul>
+		<li>Explain in plain English how the data structure "stretches" to accommodate more items if/when it reaches the initial capacity.</li>
+			<ul>
+				<li><p>The data structure "stretches" by storing the items in a temporary cart, then creating a new cart that is twice the size, and finally puttin all the items back into the new, larger cart. </p></li>
+			</ul>
+		<li>Identify all the static methods used in the app.</li>
+			<ul>
+				<li><p>The only static method is the main method is the GoShopping2.java file.</p></li>
+			</ul>
+		<li>If the ShoppingCart constructor was changed in the following manner, what would happen? </li>
+			<ul>
+				<li><p>The variable cart would not be accessible outside of the constructor.  This means that no items would be able to be added to the cart.</p></li>
+			</ul>
+		<li>Briefly describe the purpose of using an "interface" in Java.</li>
+			<ul>
+				<li><p>A major purpose of using an interface in Java is to support polymorphism. You can create an interface called Animal that supports methods eat(), walk(), and sleep().  Then classes that extend Animal, such as the Dog class and the Cat class, must implement these methods as well. </p></li>
+			</ul>
+		<li>What changes must be made to the item class? Make up a simple logic for the discount method.</li>
+			<ul>
+				<li><p>If the Item class were to implement Discountable, then the only changes needed would be to add the "implements Discountable" line after the class delcaration and to also add the method public double discount().  <br>
+					<pre> public double discount(){ 
+	if(quantity > 5)
+		return 0.1;
+	else
+		return 0.0;
+}</pre> </p></li>
+			</ul>
+		<li>Assume that Item class indeed implements Discountable (a la question 8 above), does the following method compile and run properly?</li>
+			<ul>
+				<li><p>Yes this compiles and runs properly.  Because the class implements the Discoutable interface, the discount method can be called without any problems.</p></li>
+			</ul>
+		<li>Assume that Item class indeed implements Discountable (a la question 8 above), does the following statements compile and run properly?</li>
+			<ul>
+				<li><p> Yes this will compile and run correctly.  This is because the Item class inherits from the Discountable class.  So Discountable is the more general class, and then you can create a more specific object of the Item class. </p></li>
+			</ul>
+	<ol>
+
 </body>
 </html>
