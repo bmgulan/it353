@@ -11,6 +11,7 @@
 
 	<!-- css -->
 	<link href="css/main.css" rel="stylesheet">
+	<link href="css/forms.css" rel="stylesheet">
 
 	<!-- script to change css --> 
 	<script type="text/javascript">
@@ -256,20 +257,35 @@
 
 			<form align="left" name="exampleEcho" method="get" action="http://was6.itk.ilstu.edu:9080/itk/EchoAll">
 
-				<h3>Select year: </h3>
-				<input type="radio" name="Year" value="freshmen" onclick="exampleEcho.catalog.value = 'Freshmen'"> Freshmen<br>
-				<input type="radio" name="Year" value="sophomore" onclick="exampleEcho.catalog.value = 'Sophomore'"> Sophomore<br>
-				<input type="radio" name="Year" value="junior" onclick="exampleEcho.catalog.value = 'Junior'"> Junior<br>
-				<input type="radio" name="Year" value="senior" onclick="exampleEcho.catalog.value = 'Senior'"> Senior<br>
+				<p>Name: </p>
+				<input type="text" name="name"><br>
+				<p>Password: </p>
+				<input type="password" name="pw"><br><br>
+
+				<p> Age: </p>
+				<select name="age"> <script> listAges()</script> </select><br><br>
+
+				<p>Select year: </p>
+				<input type="radio" name="year" value="freshmen"> Freshmen<br>
+				<input type="radio" name="year" value="sophomore"> Sophomore<br>
+				<input type="radio" name="year" value="junior"> Junior<br>
+				<input type="radio" name="year" value="senior"> Senior<br>
 				<br>
 
-				<h3>Ice Cream Flavor: </h3>
-				<input type="checkbox" name="Flavor" value="Chocolate" onclick="exampleEcho.catalog.value='Chocolate'"> Chocolate <br>
-				<input type="checkbox" name="Flavor" value="Vanilla" onclick="exampleEcho.catalog.value='Chocolate'"> Vanilla <br>
-				<input type="checkbox" name="Flavor" value="Mint Chocolate Chip" onclick="exampleEcho.catalog.value='Chocolate'"> Mint Chocolate Chip <br>
-				<input type="checkbox" name="Flavor" value="Rocky Road" onclick="exampleEcho.catalog.value='Chocolate'"> Rocky Road <br>
+				<p>Ice Cream Flavor: </p>
+				<input type="checkbox" name="choc" value="Chocolate"> Chocolate <br>
+				<input type="checkbox" name="van" value="Vanilla"> Vanilla <br>
+				<input type="checkbox" name="mcc" value="Mint Chocolate Chip"> Mint Chocolate Chip <br>
+				<input type="checkbox" name="rr" value="Rocky Road"> Rocky Road <br>
+
+				<p>Give a brief description of yourself:</p>
+				<textarea name="desc" value="description"></textarea><br>
+
+				<input type="hidden" name="SecretGreeting" value="Hello!">
 	
-				<input type="submit">
+				<br>
+				<input type="submit" value="Submit">
+				<input type="reset" value="Reset">
 
 			</form>
 
@@ -279,7 +295,7 @@
 			<div class="h3-center"> INFO FORM </div>
 			<br>
 
-			<form align="left" onsubmit="validate()">
+			<form align="left" onsubmit="return validate(this)" method="get" action="http://was6.itk.ilstu.edu:9080/itk/EchoAll">
 
 				Name: <input type="text" name="name"><br><br>
 
@@ -287,13 +303,16 @@
 				<input type="radio" name="gender" value="female" onclick=""> Female<br>
 				<input type="radio" name="gender" value="neither" onclick=""> Do Not Disclose<br><br>
 
-				Email: <input name="email" type="email" placeholder="someone@example.com" align="left" /> <br><br>
+				Email: <input name="email" type="text" align="left" /> <br><br>
 
-				Zip Code: <input type="text" name="zip"><br><br>
+				Zip Code: <input type="text" name="zipcode"><br><br>
 
-				Age: <select name="age"> <script> listAges()</script> </select><br><br>
+				Age: <select name="age"> 
+				<option id="badIndex" value="0">Select age</option><option value="1">Below 18</option><option value="2">18-39</option><option value="3">40 or Above</option>
+				 </select><br><br>
 
-				<input type="submit">
+				<input type="submit" value="Submit">
+				<input type="reset" value="Reset">
 
 			</form>
 
@@ -353,39 +372,57 @@
 	<hr>
 
 	<!-- name and scores -->
-	<div class="row" align="center">
+	<div class="row" align="left">
 
-		<div class="col-half-gray">
+		<div class="col-half-gray" align="left">
 			<div class="h3-center"> WHAT DOES ARIA STAND FOR? </div>
 			<br>
+
+			<p> ARIA stands for Accessible Rich Internet Applications suite.  According to w3.org, this suite "Defines a way to make Web content and Web applications more accessible to people with disabilities." Certain functionality is used in different websites, and ARIA addresses these accessibility challenges.</p>
 		</div>
 
 		<div class="col-half-gray">
 			<div class="h3-center"> WHAT IS SEARCH ENGINE OPTIMIZATION? </div>
 			<br>
+			<p> Search Engine Optimization is a way of designing your site so that organically it can appear as one of the top results when searching specific key words related to your content. This is important because it can help gain visibility for your company and also allow more users to know about and use your site. </p>
 		</div>
 
 	</div>
 
-	<div class="row" align="center">
+	<div class="row" align="left">
 
 		<div class="col-half-gray">
 			<div class="h3-center"> WHAT IS CLOUD COMPUTING? </div>
 			<br>
+			<p>Cloud computing is simply a way of accessing data and applications over the internet as opposed to using your local machines hardware.  The difference between cloud storage and a data center is that usually a data center for a company is on site and run by the in house IT department. Cloud computing is generally offsite and run by a third party vendor. </p>
 		</div>
 
 		<div class="col-half-gray">
 			<div class="h3-center"> WHAT IS A LAMP STACK? </div>
 			<br>
+			<p> A LAMP stack stands for a set of technologies and frameworks used for web development. Namely these technologies are Linux, Apache, MySQL, and PHP. One major advantage is that it is free because all of the software in the stack is open source.  Another advantage is faster, more flexible, and easier than any other alternative.</p>
 		</div>
 
 	</div>
 
-	<div class="row" align="center">
+	<div class="row" align="left">
 
 		<div class="col-half-gray">
 			<div class="h3-center"> WHAT IS A WEB FRAMEWORK? </div>
 			<br>
+			<p> A web application framework is a type of framework and set of tools specifically designed to help devlopers create web applications. Using frameworks helps developers by taking care of certain functionality, such as security, session management, and data persistence.  Some frameworks include JavaServer Faces, Django, and Pylons.</p>
+		</div>
+
+		<div class="col-half-gray">
+			<div class="h3-center"> SOURCES </div>
+			<br>
+			<ul>
+				<li><a href="http://www.w3.org/WAI/intro/aria">ARIA</a></li>
+				<li><a href="http://searchenginewatch.com/article/2259693/SEO-Basics-8-Essentials-When-Optimizing-Your-Site">SEO</a></li>
+				<li><a href="http://www.pcmag.com/article2/0,2817,2372163,00.asp">CLOUD</a></li>
+				<li><a href="http://itechcraft.com/service/web-development/lamp/">LAMP</a></li>
+				<li><a href="http://docforge.com/wiki/Web_application_framework">FRAMEWORKS</a></li>
+			</ul>
 		</div>
 
 	</div>
@@ -496,7 +533,7 @@
 	</script>
 	
 	<!-- This is the function to allow the user to input scores, and return the min, max, average, and total above average -->
-	<script type="text/javascript">
+	<script>
 	function calculateScores() {
 
 		var numScores = parseInt(prompt("Enter total number of scores: "));
@@ -534,7 +571,7 @@
 	</script>	
 
 	<!-- This function displays one site during business hours, and a different one any other time -->
-	<script type="text/javascript">
+	<script>
 
 		function displaySites() {
 
@@ -553,7 +590,7 @@
 	</script>
 
 	<!-- Tihs function will compute the pay for an employee -->
-	<script type="text/javascript">
+	<script>
 
 	function calculatePay(){
 
@@ -595,10 +632,155 @@
 	}
 	</script>
 
-	<!-- script to validate info on form -->
+	<!-- scripts to validate info on form -->
 	<script>
 
-		alert("Everything looks good boss");
+		//This function validates all the fields within the form
+		function validate(theForm){
+			if(!checkNulls(theForm))
+				return false;
+			if(!validateZip(theForm))
+				return false;
+			if(!validateEmail(theForm))
+				return false;
+			if(!validateAge(theForm))
+				return false;
+
+			return true;
+		}
+
+		
+		//This function validates the zipcode within the form
+		function validateZip(theForm){
+			zipStr = theForm.zipcode.value;
+		    if (zipStr.length != 5 && zipStr.length != 10)
+		    {
+		        alert("format: 5 or 10 digits required for a zipcode");
+		        return false; // abort submission
+		    }
+		    // length is good ... now check for all digits
+		    // go thru each of the chars in the zipcode string
+		    for (var i in zipStr)
+		    {
+		        aChar = zipStr.charAt(i); // can also use zipStr[i]
+		        if (!isDigit(aChar))
+		        {
+		            alert("char " + aChar + " is NOT a digit");
+		            return false; // abort submission
+		        }
+		    }
+		    return true; // proceed with submission
+
+		}
+
+		//-------------------------------------------------------------------
+		// Source: http://www.mattkruse.com/javascript/validations/source.html
+		// isDigit(value)
+		//   Returns true if value is a 1-character digit
+		//-------------------------------------------------------------------
+		function isDigit(num) {
+		    if (num.length>1){return false;}
+		    var string="1234567890-";
+		    if (string.indexOf(num)!=-1){return true;}
+		    return false;
+		}
+
+
+		//This function validates the email within the form
+		function validateEmail(theForm){
+		    emailStr = theForm.email.value;
+		    atPosition = emailStr.indexOf("@");
+		    afterAtStr = emailStr.substring(atPosition + 1); 
+		    /*
+		    if (atPosition == -1                        // must have an @ sign
+		    	|| emailStr.indexOf("@", emailStr.indexOf("@") + 1) > -1	//cannot contain more than one @
+		        || atPosition == 0                      // no @ at the beginning
+		        || atPosition == emailStr.length - 1	// no @ at the end
+		        || afterAtStr.charAt(0) == "."			// no . right after @
+		        || afterAtStr.charAt(length - 1) == "." // no . at the end 
+		        || afterAtStr.indexOf(".") == -1		// must conatin a . 
+		        ) { 
+		        alert("Email not in the right form ... (add appropriate message here)");
+		        result = false;
+		    } 
+		    */
+		    if(atPosition == -1){
+		    	alert("Email not in the right form, must have an @ sign.");
+		    	return false;
+		    }
+		    if(emailStr.indexOf("@", emailStr.indexOf("@") + 1) > -1){
+		    	alert("Email not in the right form, cannot contain more than one @");
+		    	return false;
+		    }
+		    if(atPosition == 0){
+		    	alert("Email not in the right form, no @ at the beginning");
+		    	return false;
+		    }
+		    if(atPosition == emailStr.length - 1){
+		    	alert("Email not in the right form, no @ at the end");
+		    	return false;
+		    }
+		    if(afterAtStr.charAt(0) == "."){
+		    	alert("Email not in the right form, no . right after the @ symbol.");
+		    	return false;
+		    }
+		    if(afterAtStr.charAt(length) == "."){
+		    	alert("Email not in the right form, no . at the end.");
+		    	return false;
+		    }
+		    if(afterAtStr.indexOf(".") == -1){
+		    	alert("Email not in the right form, must contain a .");
+		    	return false;
+		    }
+
+		    return true;
+		}
+
+		//This function checks to make sure there is a valid age range 
+		function validateAge(theForm){
+
+			ageIndex = theForm.age.value;
+
+			if(ageIndex == 0){
+				alert("Must select an age range!");
+				return false;
+			}
+
+			return true;
+		}
+
+		function checkNulls(theForm){
+			if(!theForm.name.value.trim()){
+				alert("Enter value for name!");
+				return false;
+			}
+			if(!theForm.email.value.trim()){
+				alert("Enter value for email!");
+				return false;
+			}
+			if(!theForm.zipcode.value.trim()){
+				alert("Enter value for zipcode!");
+				return false;
+			}
+			if(!checkRadios(theForm)){
+				alert("Select value for gender!");
+				return false;
+			}
+
+			return true;
+		}
+
+		function checkRadios(theForm){
+			var radios = document.getElementsByName("gender");
+
+		     for (var i = 0, len = radios.length; i < len; i++) {
+		          if (radios[i].checked) {
+		              return true;
+		          }
+		     }
+
+		     return false;
+		}
 
 	</script>
 
