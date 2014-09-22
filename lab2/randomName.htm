@@ -1,0 +1,55 @@
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<link href="main.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<h1 align="center"> RANDOM NAME SELECTOR</h1>
+
+	<table align="center">
+		<tr>
+			<td colspan="3" align="center"> STUDENTS</td>
+		</tr>
+		<tr>
+		    <td id="0">Brandon Graybeal</td>
+		    <td id="1">Rachel Schifano</td> 
+		    <td id="2">Mike Poulsen</td>
+ 		 </tr>
+ 		 <tr>
+		    <td id="3">Chris O'Brien</td>
+		    <td id="4">Travis Kessinger</td> 
+		    <td id="5">Brandon Diekhoff</td>
+ 		 </tr>
+	</table>
+
+	<br>
+	<center><button>RANDOM</button></center>
+
+	<script>
+
+	$("button").click(function(){
+
+		var i;
+
+		for(i = 0; i < 6; i++){
+			document.getElementById(i).style.background = "white";
+			document.getElementById(i).style.color = "black";
+		}
+
+		var names = ["Brandon Graybeal", "Rachel Schifano", "Mike Poulsen", "Chris O'Brien", 
+		"Travis Kessinger", "Brandon Diekhoff"];
+
+		var index = Math.floor(Math.random() * 5);
+
+		document.getElementById(index).style.background = "yellow";
+		document.getElementById(index).style.color = "red";
+
+	});
+
+	</script>
+
+</body>
+</html>

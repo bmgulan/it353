@@ -1,0 +1,50 @@
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<link href="main.css" rel="stylesheet">
+
+</head>
+
+	<form onsubmit="checkRadio()">
+
+		<input type="radio" name="wonder" value="Grandon Canyon"> Grandon Canyon<br>
+		<input type="radio" name="wonder" value="Great Barrier Reef"> Great Barrier Reef<br>
+		<input type="radio" name="wonder" value="Harbor of Rio de Janeiro"> Harbor of Rio de Janeiro<br>
+		<input type="radio" name="wonder" value="Mount Everest"> Mount Everest<br>
+		<input type="radio" name="wonder" value="Aurora"> Aurora<br>
+		<input type="radio" name="wonder" value="Paricutin Valcano"> Paricutin Valcano<br>
+		<input type="radio" name="wonder" value="Victoria Falls"> Victoria Falls<br>
+		<br>
+
+		<input type="submit" value="Submit">
+
+	</form>
+
+	<script>
+
+		function checkRadio(){
+
+			var i =0;
+			var checked = document.forms[0].elements[i].checked;
+
+			while(!checked && i < 7){
+				i++;
+				checked = document.forms[0].elements[i].checked;
+				
+			}
+
+			
+
+			if(i == 7){
+				alert("No button selected!");
+			}
+			else{
+				alert("Option number " + i + " selected: " + document.forms[0].elements[i].value);
+			}
+
+		}
+
+	</script>
+
+</body>
+</html>

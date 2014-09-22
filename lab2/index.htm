@@ -1,0 +1,191 @@
+<html>
+<meta name="Microsoft Border" content="tl, default">
+
+<body><!--msnavigation-->
+
+	<h1> Airline Form </h1>
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr><td>
+			<p>&nbsp;</p>
+			<br>
+		</td></tr><!--msnavigation-->
+	</table><!--msnavigation-->
+	<table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr><td valign="top" width="1%">
+			<p>
+			</p>
+			<p>&nbsp;</p>
+			<br>
+		</td><td valign="top" width="24"></td><!--msnavigation-->
+		<td valign="top">
+		<form onsubmit="validateBeforeSearch()">Indicate the search preference below: <p>
+			<input type=radio name=searchPref value=all checked>Search ALL airlines <br>
+			<input type=radio name=searchPref value=indiv onclick="focusFromRadio()">Search for ONLY the airline(s): <br><br>
+			&nbsp;&nbsp;&nbsp;&nbsp; Choice 1:&nbsp;<input type=text name=air1 onclick="focusFromText()"> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp; Choice 2:&nbsp;<input type=text name=air2 onclick="focusFromText()"> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp; Choice 3:&nbsp;<input type=text name=air3 onclick="focusFromText()"> <p>
+			<input type=submit value="Search"> 
+		</form><!--msnavigation-->
+		</td></tr><!--msnavigation-->
+	</table>
+
+
+	<br><hr><br>
+
+	<h1>Other JavaScript Programs </h1>
+
+	<h2>Pages</h2>
+	<ul>
+		<li><a href="randomName.htm">Random Name Selector Page</a></li>
+		<li><a href="importantTag.htm">Important Tag Page</a></li>
+		<li><a href="radioObjects.htm">Radio Objects Page</a></li>
+	</ul>
+
+	<h2>Other Functions</h2>
+	
+
+	<h4>Image Window Button</h4>
+	<button onclick="openWindow()">CLICK HERE TO SEE IMAGE</button><button onclick="closeWindow()">CLOSE</button>
+
+	<br>
+
+	<h4>Select For Department Page</h4>
+	<select id="mySelect" onchange="selectDepartment()">
+	  <option value="deptA">Department A
+	  <option value="deptB">Department B
+	  <option value="deptC">Department C
+	</select>
+
+	<br>
+
+	<h4>Check Valid Username</h4>
+	<form name="myForm">
+        Enter New Username: <input type="text" name="username" onkeyup="testValid(this)">
+        <div id="validMessage"></div>
+    </form>
+
+    <h4>Pizza Topping Picker</h4>
+	CHOOSE YOUR PIZZA TOPPINGS:<br>
+	<select id="toppings" multiple>
+		<option value="Cheese">Cheese</option>
+		<option value="Sausage">Sausage</option>
+		<option value="Pepperoni">Pepporoni</option>
+		<option value="Mushrooms">Mushrooms</option>
+		<option value="Peppers">Peppers</option>
+	</select><br>
+	<input type="submit" onclick="testSelect(this)">
+
+	<br><hr><br>
+
+	<h1> Write Ups </h1>
+
+	<ul>
+		<li><em>8 a. Did you take a course that is programming related in high school? If so, give details about the course. If not, why not? (No such course? Why not? etc.)</em></li>
+		<ul>
+			<li>In high school I did not take a programming related course. This is because I went to a fairly small high school, and there were not any classes offered that taught programming, or anything about technology in general.
+				I wish my high school would have had these classes so I could have take advantage of them.</li>
+		</ul>
+		<li><em>8 b. If you could design the curriculum on computing for high school students going forward, how would you design it? Discuss the courses involved, what each one should cover, etc. Try to give as much details as possible, knowing what you know as a student in IT right now.</em></li>
+		<ul>
+			<li>If I could design a high school curriculum on computing, there are two main courses that I would like to include. I would want to make the information as useful as possible for a student going forward, but also take into consideration cost and interest so that small schools
+				like mine could still take adavantage of offering them. I would make sure there is at least a course of Java offered, as well as a coures on Web Development. I believe these two are the most relevant for a student today looking to enter the technology field. Java is important
+				because almost every large company uses it in there intercompany software. Web Development is very important considering how much time we all spend on the internet. </li>
+		</ul>
+	</ul>	
+
+	<!-- These are all the scripts required for this page -->
+	<script>
+
+		function testSelect(form){
+
+			var index = 0;
+			var toppings = [];
+
+			var x=document.getElementById("toppings");
+			for (var i = 0; i < x.options.length; i++) {
+				if(x.options[i].selected ==true){
+					toppings.push((x.options[i].value));
+				}
+			}
+
+			confirm("You selected the following toppings: " + toppings);
+
+		}
+
+		function testValid(username){
+	
+            var taken = ["aaa111","bbb222","ccc333"];
+            var curr = username.value;
+            var valid = (taken.indexOf(curr) > -1);
+            var namediv = document.getElementById("validMessage");
+
+            if(!valid){
+            	namediv.innerHTML = "<div style=\"color:green\">Available Username</div>";
+            }
+            else{
+            	namediv.innerHTML = "<div style=\"color:red\">Username Already Taken!</div>";
+            }
+
+
+		}
+
+		function selectDepartment(){
+
+			var x = document.getElementById("mySelect").value;
+
+			if(x == "deptA"){
+				location = "deptA.htm";
+			}
+			else if(x == "deptB"){
+				location = "deptB.htm";
+			}
+			else if(x == "deptC"){
+				location = "deptC.htm";
+			}
+
+		}
+
+		function openWindow(){
+			newWindow = window.open();
+			newWindow.document.write("<p><img src='mountainMain.jpg'></p>")
+		}
+
+		function closeWindow(){
+			newWindow.close();
+		}
+
+		function focusFromRadio(){
+
+			document.forms[0].elements[2].focus();
+
+		}
+
+		function focusFromText(){
+			document.forms[0].elements[1].checked = true;
+		}
+
+		function validateBeforeSearch(){
+
+			var valid = true;
+
+			if(!document.forms[0].elements[0].checked){
+				var x = document.forms[0].elements[2].value;
+				var y = document.forms[0].elements[3].value;
+				var z = document.forms[0].elements[4].value;
+
+				if((x == null || x == "") && (y == null || y == "") && (z == null || z == "")){
+					alert("Must fill out at least one of the choices!");
+					valid = false;
+				}
+			}
+
+			if(valid){
+				alert("Valid form.");
+			}
+		}
+
+	</script>
+
+</body>
+</html>

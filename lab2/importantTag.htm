@@ -1,0 +1,27 @@
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+
+	<p class="important">Paragraph 1</p>
+	<p>Paragraph 2</p>
+	<p>Paragraph 3</p>
+	<p class="important">Paragraph 4</p>
+	<p class="important">Paragraph 5</p>
+	<br>
+	<button>Submit</button>
+
+	<script>
+
+		$("button").click(function (){
+  			$(".important").css({
+		      "background-color":"yellow",
+		    });
+		});
+
+	</script>
+
+</body>
+</html>
