@@ -9,6 +9,7 @@
 
 	<!-- CSS files -->
 	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/main.css">
 
 	<!-- js files -->
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -19,6 +20,235 @@
 
 <body>
 
+	<h1 align="center">WEB TECHNOLOGIES QUIZ</h1>
+
+	<hr>
+
+	<div class="row" align="center">
+	<h2 align="left">MULTIPLE CHOICE</h2>
+	</div>
+	<div class="row">
+
+		<!--Question 1 -->
+		<div class="col-small">
+			<h3>Question 1</h3>
+			<p align="left">Type Question HERERERERERERERERE</p>
+			<form align="left" id="question1">
+				<input type="radio" name="year" value="freshmen"> Freshmen<br>
+				<input type="radio" name="year" value="sophomore"> Sophomore<br>
+				<input type="radio" name="year" value="junior"> Junior<br>
+			</form>
+		</div>
+
+		<!-- Question 2 -->
+		<div class="col-small">
+			<h3>Question 2</h3>
+			<p align="left">Type Question HERERERERERERERERE</p>
+			<form align="left" id="question2">
+				<input type="radio" name="year" value="freshmen"> Freshmen<br>
+				<input type="radio" name="year" value="sophomore"> Sophomore<br>
+				<input type="radio" name="year" value="junior"> Junior<br>
+			</form>
+		</div>
+
+		<!-- Question 3 -->
+		<div class="col-small">
+			<h3>Question 3</h3>
+			<p align="left">Type Question HERERERERERERERERE</p>
+			<form align="left" id="question3">
+				<input type="radio" name="year" value="freshmen"> Freshmen<br>
+				<input type="radio" name="year" value="sophomore"> Sophomore<br>
+				<input type="radio" name="year" value="junior"> Junior<br>
+			</form>
+		</div>
+
+	</div> <!-- FIRST ROWOWOWOWOWOWOWOW -->
+
+
+	<div class="row">
+	<h2>TRUE/FALSE</h2>
+	</div>
+	<div class="row">
+
+		<!-- Question 4-->
+		<div class="col-small">
+			<h3 align="center">Question 4</h3>
+			<p align="left">type question right here bitch</p>
+			<select id="question4" align="left">
+				<option value="null">SELECT
+				<option value="true">TRUE
+				<option value="false">FALSE
+			</select>
+		</div>
+
+		<!-- Question 5-->
+		<div class="col-small">
+			<h3 align="center">Question 5</h3>
+			<p align="left">type question right here bitch</p>
+			<select align="left" id="question5">
+				<option value="null">SELECT
+				<option value="true">TRUE
+				<option value="false">FALSE
+			</select>
+		</div>
+
+		<!-- Question 6-->
+		<div class="col-small">
+			<h3 align="center">Question 6</h3>
+			<p align="left">type question right here bitch</p>
+			<select align="left" id="question6">
+				<option value="null">SELECT
+				<option value="true">TRUE
+				<option value="false">FALSE
+			</select>
+		</div>
+
+	</div>	<!-- SECOND ROWOWOWOWOWOWOWOWOW -->
+
+
+	<div class="row">
+	<h2>FILL IN THE BLANK</h2>
+	</div>
+	<div class="row">
+
+		<!-- Question 7-->
+		<div class="col-small">
+			<h3 align="center">Question 7</h3>
+			<p align="left">type question <input id="question7" size="5"> here bitch</p>
+		</div>
+
+		<!-- Question 8-->
+		<div class="col-small">
+			<h3 align="center">Question 8</h3>
+			<p align="left">type question <input id="question8" size="5"> here bitch</p>	
+		</div>
+
+		<!-- Question 9-->
+		<div class="col-small">
+			<h3 align="center">Question 9</h3>
+			<p align="left">type question <input id="question9" size="5"> here bitch</p>	
+		</div>
+
+	</div>	<!-- THIRD ROWOWOWOWOWOWOWOWOW -->
+
+	<br><br>
+
+	<!--<div class="button big-btn">SUBMIT</div><div class="button big-btn">ANSWERS</div> -->
+	<div align="center">
+		<button onclick="showQuestions()">QUESTIONS</button><button onclick="submitQuiz()">SUBMIT</button><button onclick="showAnswers()">ANSWERS</button>
+	</div>
+
+<!--********************************************* DIVIDER BETWEEN SECTIONS ********************************************* -->
+
+	<div class="row2" align="center">
+	<h2 align="left">MULTIPLE CHOICE</h2>
+	</div>
+	<div class="row2">
+
+		<!--Question 1 -->
+		<div class="col-small">
+			<h3>Question 1</h3>
+			<p align="left">Type Question HERERERERERERERERE</p>
+		</div>
+
+		<!-- Question 2 -->
+		<div class="col-small">
+			<h3>Question 2</h3>
+			<p align="left">Type Question HERERERERERERERERE</p>
+		</div>
+
+		<!-- Question 3 -->
+		<div class="col-small">
+			<h3>Question 3</h3>
+			<p align="left">Type Question HERERERERERERERERE</p>
+		</div>
+
+	</div> <!-- FIRST ROWOWOWOWOWOWOWOW -->
+
+
+	<div class="row2">
+	<h2>TRUE/FALSE</h2>
+	</div>
+	<div class="row2">
+
+		<!-- Question 4-->
+		<div class="col-small">
+			<h3 align="center">Question 4</h3>
+			<p align="left">type question right here bitch</p>
+		</div>
+
+		<!-- Question 5-->
+		<div class="col-small">
+			<h3 align="center">Question 5</h3>
+			<p align="left">type question right here bitch</p>
+		</div>
+
+		<!-- Question 6-->
+		<div class="col-small">
+			<h3 align="center">Question 6</h3>
+			<p align="left">type question right here bitch</p>
+		</div>
+
+	</div>	<!-- SECOND ROWOWOWOWOWOWOWOWOW -->
+
+
+	<div class="row2">
+	<h2>FILL IN THE BLANK</h2>
+	</div>
+	<div class="row2">
+
+		<!-- Question 7-->
+		<div class="col-small">
+			<h3 align="center">Question 7</h3>
+		</div>
+
+		<!-- Question 8-->
+		<div class="col-small">
+			<h3 align="center">Question 8</h3>
+		</div>
+
+		<!-- Question 9-->
+		<div class="col-small">
+			<h3 align="center">Question 9</h3>
+		</div>
+
+	</div>	<!-- THIRD ROWOWOWOWOWOWOWOWOW -->
+	
+
+<!--********************************************* SECTION FOR SCRIPTS ********************************************* -->
+	<!-- script for submit button -->
+	<script>
+
+		$( document ).ready(function() {
+			$('.row2').hide();
+		})
+
+		function submitQuiz(){
+			alert("SUBMIT");
+		}
+
+	</script>
+
+	<!-- script for answer button -->
+	<script>
+
+		function showAnswers(){
+			$('.row').hide("bounce",2000);
+			$('.row2').show("slide",2000);
+		}
+
+	</script>
+
+
+	<!-- script for question button -->
+	<script>
+
+		function showQuestions(){
+			$('.row2').hide("slide",2000);
+			$('.row').show("bounce",2000);
+		}
+
+	</script>
 
 </body>
 </html>
