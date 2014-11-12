@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resume>
+	<name>Brandon Graybeal</name>
+	<email>bmgrayb@ilstu.edu</email>
+	<phone>5555555555</phone>
+	<schooling>
+		<school>Illinois State University</school>
+		<major>Computer Science</major>
+		<gpa>3.0</gpa>
+		<relevantCoursework>
+			<course>IT179 - Algorithms and Data Structures 1</course>
+			<course>IT279 - Algorithms and Data Structures 2</course>
+			<course>IT353 - Web Application Development </course>
+		</relevantCoursework>
+	</schooling>
+	<employment>
+		<job>
+			<name>ISU Physics Deparment</name>
+			<description>Undergraduate Research Assistant</description>
+		</job>
+		<job>
+			<name>Radio Shack</name>
+			<description>Sales Associate</description>
+		</job>
+		<job>
+			<name>Country Financial</name>
+			<description>Application Developer</description>
+		</job>
+	</employment>
+	<specialSkills>
+		<skill>Java</skill>
+		<skill>JavaScript</skill>
+		<skill>C++</skill>
+		<skill>SQL</skill>
+		<skill>Informatica</skill>
+	</specialSkills>
+</resume>

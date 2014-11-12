@@ -1,0 +1,90 @@
+<html>
+<head>
+
+	<meta name="title" content="XML Activity">
+	<meta name="author" content="Brandon Graybeal">
+	
+	<title>XML Activity</title>
+
+</head>
+
+<body>
+
+	<h1 align='center'>XML ACTIVITY</h1>
+
+	<ol>
+		<!-- Question 1 -->
+		<li>Give two advantages of XML over HTML.</li>
+		<ul>
+			<li>One advantage of using XML is because you are using our own markup language, you are free to use whatever tags you prefer.  The user is not restricted to specific tags to transfer data. Another advantage is how much XML has been embraced by the software community.  This is because XML is easy to read and write, allowing it to be more readily used. </li>
+		</ul>
+
+		<br>
+
+		<!-- Q 2 -->
+		<li>What is the difference between well-formedness and validity?</li>
+		<ul>
+			<li>An XML document is well-formed if it has the correct syntax. An XML document is valid if it conforms to a specified document type, such as DTD's and XSD's.</li>
+		</ul>
+
+		<br>
+
+		<!-- Q 3 -->
+		<li><a href="xml/CorpUsersA.xml">CorpUsersA.xml</a></li>
+
+		<br>
+
+		<!-- Q 4 -->
+		<li><a href="xml/CorpUsersB.xml">CorpUsersB.xml</a></li>
+
+		<br>
+
+		<!-- Q 5 -->
+		<li><a href="xml/resume.xml">Resume.xml</a></li>
+
+		<br>
+
+		<!-- Q 6 -->
+		<li>What is an XML Schema and why use it?</li>
+		<ul>
+			<li>An XML Schema describes the structure of an XML document, similar to the way a DTD can describe an XML document. The advantage of using an XSD over a DTD is because XSD's are more powerful.  This is because XSD's are written in XML so they are easier to use; they support data types; and in addition, they support namespaces. </li>
+		</ul>
+
+		<br>
+
+		<!-- Q 7 -->
+		<li>Give a few sentences describing the XSD, and is the provided XML file valid?</li>
+		<ul>
+			<li>A SimpleResume must contain the information of a name, position desired, an education element, and a references element. The name, position desired, and references elements are all of type string. The education element is a complex type made up of another complex type called school.  Each school element contains string elements of major and major courses, as well as a school name, which a string restricted to Illinois State University, University of Illinois, and MIT. In addition, a resume can contain a complex type of special skills, which contains the string element of skill.  This is restricted to Java Programming, SOA, PC Hardware, and Public Speaking. </li>
+			<li>No, this XML is not valid against the provided XSD. This is because the school name provided is ISU, when the XSD requires it to either be Illinois State University, University of Illinois, or MIT.</li>
+		</ul>
+
+		<br>
+
+		<!-- Q 8 -->
+		<li>Is it possible to have an XML document that is well-formed but not valid?</li>
+		<ul>
+			<li>Yes it is possible to have a well-formed XML document that is not valid.  The only requirements for it to be well-formed is that is it syntatically correct, such as in <a href="xml/address.xml">Address.xml</a>.  This, however, is not valid, because it does not have a second address line or country line, the zip code is too long, and the state is not one of the listed acceptable values. </li>
+		</ul>
+
+		<br>
+
+		<!-- Q 9 -->
+		<li>Is it possible to have an XML document that is valid, but not well-formed?</li>
+		<ul>
+			<li>No it is not possible for an XML document to be valid, but not well-formed. This is because on of the requirements to be considered valid is that is not only has to adhere to the rules of an XSD or DTD, but it also must be syntatically correct.</li>
+		</ul>
+
+		<br>
+
+		<!-- Q 10 -->
+		<li>Write about XBRL or RSS</li>
+		<ul>
+			<li>RSS stands for Rich Site Summary.  It is used to transmit data of frequently updated information, such as blogs, news headlines, audio clips, and videos. XML is used to transfer the data because it allows it to be transmitted in a similar format so that machines can easily read and display the data provided. Because the XML file is a standard format, it allows for interoperability between different machines. </li>
+		</ul>
+
+
+	</ol>
+
+</body>
+</html>

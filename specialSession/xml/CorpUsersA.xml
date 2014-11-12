@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clientlist>
+	<client>
+		<corpurl>http://www.ilstu.edu</corpurl>
+		<corpdate>Mar 3, 2008</corpdate>
+		<clientname>John Doe</clientname>
+	</client>
+	<client>
+		<corpurl>http://www.sun.com</corpurl>
+		<corpdate>Apr 4, 2008</corpdate>
+		<clientname>Billy Lim</clientname>
+	</client>
+	<client>
+		<corpurl>http://www.cast.ilstu.edu</corpurl>
+		<corpdate>Apr 2, 2008</corpdate>
+		<clientname>Jeff Wood</clientname>
+	</client>
+	<client>
+		<corpurl>http://www.cast.ilstu.edu</corpurl>
+		<corpdate>Apr 15, 2008</corpdate>
+		<clientname>Jan Murphy</clientname>
+	</client>
+</clientlist>

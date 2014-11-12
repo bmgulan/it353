@@ -1,11 +1,11 @@
 <html>
 <head>
 
-	<meta name="title" content="Asg 2 Page">
+	<meta name="title" content="Technology WebQuiz">
 	<meta name="description" content="This page is for IT353 assignment 2">
 	<meta name="author" content="Brandon Graybeal">
 	
-	<title>ASG 2 PAGE</title>
+	<title>WebQuiz</title>
 
 	<!-- CSS files -->
 	<link rel="stylesheet" href="css/jquery-ui.min.css">
@@ -32,37 +32,68 @@
 		<!--Question 1 -->
 		<div class="col-small">
 			<h3>Question 1</h3>
-			<p align="left">Type Question HERERERERERERERERE</p>
+			<p align="left">JQuery is a: </p>
 			<form align="left" id="question1">
-				<input type="radio" name="year" value="freshmen"> Freshmen<br>
-				<input type="radio" name="year" value="sophomore"> Sophomore<br>
-				<input type="radio" name="year" value="junior"> Junior<br>
+				<input type="radio" name="quest1" value="prolang"> Programming Language<br>
+				<input type="radio" name="quest1" value="JL"> Javascript Library<br>
+				<input type="radio" name="quest1" value="dbms"> Database Management System<br>
 			</form>
 		</div>
 
 		<!-- Question 2 -->
 		<div class="col-small">
 			<h3>Question 2</h3>
-			<p align="left">Type Question HERERERERERERERERE</p>
+			<p align="left">Which of the following is not used in creating web pages: </p>
 			<form align="left" id="question2">
-				<input type="radio" name="year" value="freshmen"> Freshmen<br>
-				<input type="radio" name="year" value="sophomore"> Sophomore<br>
-				<input type="radio" name="year" value="junior"> Junior<br>
+				<input type="radio" name="quest2" value="html"> HTML<br>
+				<input type="radio" name="quest2" value="js"> Javascript<br>
+				<input type="radio" name="quest2" value="cobol"> COBOL<br>
 			</form>
 		</div>
 
 		<!-- Question 3 -->
 		<div class="col-small">
 			<h3>Question 3</h3>
-			<p align="left">Type Question HERERERERERERERERE</p>
+			<p align="left"> Which of these technologies is included in a LAMP stack?</p>
 			<form align="left" id="question3">
-				<input type="radio" name="year" value="freshmen"> Freshmen<br>
-				<input type="radio" name="year" value="sophomore"> Sophomore<br>
-				<input type="radio" name="year" value="junior"> Junior<br>
+				<input type="radio" name="quest3" value="mac"> Mac OSX<br>
+				<input type="radio" name="quest3" value="apache"> Apache<br>
+				<input type="radio" name="quest3" value="mongodb"> MongoDB<br>
 			</form>
 		</div>
 
 	</div> <!-- FIRST ROWOWOWOWOWOWOWOW -->
+
+
+	<div class="row2" align="center">
+	<h2 align="left">MULTIPLE CHOICE</h2>
+	</div>
+	<div class="row2">
+
+		<!--Question 1 -->
+		<div class="col-small">
+			<h3>Question 1 Answer</h3>
+			<p align="left">JQuery is a <b>JAVASCRIPT LIBRARY</b></p>
+		</div>
+
+		<!-- Question 2 -->
+		<div class="col-small">
+			<h3>Question 2 Answer</h3>
+			<p align="left"><b>COBOL</b> is not used in creating web pages.</p>
+		</div>
+
+		<!-- Question 3 -->
+		<div class="col-small">
+			<h3>Question 3 Answer</h3>
+			<p align="left"><b>APACHE</b> is included in a LAMP stack. </p>
+		</div>
+
+	</div> <!-- FIRST ROWOWOWOWOWOWOWOW -->
+
+
+
+
+
 
 
 	<div class="row">
@@ -73,7 +104,7 @@
 		<!-- Question 4-->
 		<div class="col-small">
 			<h3 align="center">Question 4</h3>
-			<p align="left">type question right here bitch</p>
+			<p align="left">JQuery is written in Javascript.</p>
 			<select id="question4" align="left">
 				<option value="null">SELECT
 				<option value="true">TRUE
@@ -84,7 +115,7 @@
 		<!-- Question 5-->
 		<div class="col-small">
 			<h3 align="center">Question 5</h3>
-			<p align="left">type question right here bitch</p>
+			<p align="left">JavaDB and Apache Derby are not the same thing.</p>
 			<select align="left" id="question5">
 				<option value="null">SELECT
 				<option value="true">TRUE
@@ -94,8 +125,8 @@
 
 		<!-- Question 6-->
 		<div class="col-small">
-			<h3 align="center">Question 6</h3>
-			<p align="left">type question right here bitch</p>
+			<h3 align="center">Question 6 </h3>
+			<p align="left">Google's company slogan is <em>Don't be evil.</em></p>
 			<select align="left" id="question6">
 				<option value="null">SELECT
 				<option value="true">TRUE
@@ -106,65 +137,6 @@
 	</div>	<!-- SECOND ROWOWOWOWOWOWOWOWOW -->
 
 
-	<div class="row">
-	<h2>FILL IN THE BLANK</h2>
-	</div>
-	<div class="row">
-
-		<!-- Question 7-->
-		<div class="col-small">
-			<h3 align="center">Question 7</h3>
-			<p align="left">type question <input id="question7" size="5"> here bitch</p>
-		</div>
-
-		<!-- Question 8-->
-		<div class="col-small">
-			<h3 align="center">Question 8</h3>
-			<p align="left">type question <input id="question8" size="5"> here bitch</p>	
-		</div>
-
-		<!-- Question 9-->
-		<div class="col-small">
-			<h3 align="center">Question 9</h3>
-			<p align="left">type question <input id="question9" size="5"> here bitch</p>	
-		</div>
-
-	</div>	<!-- THIRD ROWOWOWOWOWOWOWOWOW -->
-
-	<br><br>
-
-	<!--<div class="button big-btn">SUBMIT</div><div class="button big-btn">ANSWERS</div> -->
-	<div align="center">
-		<button onclick="showQuestions()">QUESTIONS</button><button onclick="submitQuiz()">SUBMIT</button><button onclick="showAnswers()">ANSWERS</button>
-	</div>
-
-<!--********************************************* DIVIDER BETWEEN SECTIONS ********************************************* -->
-
-	<div class="row2" align="center">
-	<h2 align="left">MULTIPLE CHOICE</h2>
-	</div>
-	<div class="row2">
-
-		<!--Question 1 -->
-		<div class="col-small">
-			<h3>Question 1</h3>
-			<p align="left">Type Question HERERERERERERERERE</p>
-		</div>
-
-		<!-- Question 2 -->
-		<div class="col-small">
-			<h3>Question 2</h3>
-			<p align="left">Type Question HERERERERERERERERE</p>
-		</div>
-
-		<!-- Question 3 -->
-		<div class="col-small">
-			<h3>Question 3</h3>
-			<p align="left">Type Question HERERERERERERERERE</p>
-		</div>
-
-	</div> <!-- FIRST ROWOWOWOWOWOWOWOW -->
-
 
 	<div class="row2">
 	<h2>TRUE/FALSE</h2>
@@ -174,22 +146,54 @@
 		<!-- Question 4-->
 		<div class="col-small">
 			<h3 align="center">Question 4</h3>
-			<p align="left">type question right here bitch</p>
+			<p align="left">JQuery is written in Javascript. <b>TRUE</b></p>
 		</div>
 
 		<!-- Question 5-->
 		<div class="col-small">
 			<h3 align="center">Question 5</h3>
-			<p align="left">type question right here bitch</p>
+			<p align="left">avaDB and Apache Derby are not the same thing. <b>FALSE</b></p>
 		</div>
 
 		<!-- Question 6-->
 		<div class="col-small">
 			<h3 align="center">Question 6</h3>
-			<p align="left">type question right here bitch</p>
+			<p align="left">Google's company slogan is <em>Don't be evil.</em> <b>TRUE</b></p>
 		</div>
 
 	</div>	<!-- SECOND ROWOWOWOWOWOWOWOWOW -->
+
+
+
+
+
+
+
+
+	<div class="row">
+	<h2>FILL IN THE BLANK</h2>
+	</div>
+	<div class="row">
+
+		<!-- Question 7-->
+		<div class="col-small">
+			<h3 align="center">Question 7</h3>
+			<p align="left">LAMP stands for LINUX, APACHE, <input id="question7" size="5">, and PHP.</p>
+		</div>
+
+		<!-- Question 8-->
+		<div class="col-small">
+			<h3 align="center">Question 8</h3>
+			<p align="left">Ruby On <input id="question8" size="5"> is a popular Web Application Framework.</p>	
+		</div>
+
+		<!-- Question 9-->
+		<div class="col-small">
+			<h3 align="center">Question 9</h3>
+			<p align="left">The C of the MVC design pattern stands for <input id="question9" size="10"></p>	
+		</div>
+
+	</div>	<!-- THIRD ROWOWOWOWOWOWOWOWOW -->
 
 
 	<div class="row2">
@@ -200,20 +204,35 @@
 		<!-- Question 7-->
 		<div class="col-small">
 			<h3 align="center">Question 7</h3>
+			<p align="left">LAMP stands for LINUX, APACHE, <b>MySQL</b>, and PHP.</p>
 		</div>
 
 		<!-- Question 8-->
 		<div class="col-small">
 			<h3 align="center">Question 8</h3>
+			<p align="left">Ruby On <b>RAILS</b> is a popular Web Application Framework.</p>
 		</div>
 
 		<!-- Question 9-->
 		<div class="col-small">
 			<h3 align="center">Question 9</h3>
+			<p>The C of the MVC design pattern stands for <b>CONTROLLER</b></p>
 		</div>
 
 	</div>	<!-- THIRD ROWOWOWOWOWOWOWOWOW -->
-	
+
+
+
+
+	<br><br>
+
+	<!--<div class="button big-btn">SUBMIT</div><div class="button big-btn">ANSWERS</div> -->
+	<div align="center">
+		<button onclick="showQuestions()">QUESTIONS</button><button onclick="submitQuiz()">SUBMIT</button><button onclick="showAnswers()">ANSWERS</button>
+	</div>
+
+	<br><br>
+
 
 <!--********************************************* SECTION FOR SCRIPTS ********************************************* -->
 	<!-- script for submit button -->
@@ -221,10 +240,140 @@
 
 		$( document ).ready(function() {
 			$('.row2').hide();
+			$('.row1').css("background-color", "#E1F3F5");
 		})
 
 		function submitQuiz(){
-			alert("SUBMIT");
+			var score = 0;
+			var wrong = "";
+			score += checkQuest1();
+			score += checkQuest2();
+			score += checkQuest3();
+			score += checkQuest4();
+			score += checkQuest5();
+			score += checkQuest6();
+			score += checkQuest7();
+			score += checkQuest8();
+			score += checkQuest9();
+
+			if(checkQuest1() == 0)
+				wrong +="1,"
+			if(checkQuest2() == 0)
+				wrong +="2,"
+			if(checkQuest3() == 0)
+				wrong +="3,"
+			if(checkQuest4() == 0)
+				wrong +="4,"
+			if(checkQuest5() == 0)
+				wrong +="5,"
+			if(checkQuest6() == 0)
+				wrong +="6,"
+			if(checkQuest7() == 0)
+				wrong +="7,"
+			if(checkQuest8() == 0)
+				wrong +="8,"
+			if(checkQuest9() == 0)
+				wrong +="9"
+
+			alert("Score: " + score + "/9. \n Wrong questions: " + wrong);
+
+			score = 0;
+
+		}
+
+		function checkQuest1(){
+			var radios1 = document.getElementsByName("quest1");
+
+			var count = 0;
+
+			for (var i = 0, len = radios1.length; i < len; i++) {
+		          if (radios1[i].checked) {
+		              if(radios1[i].value == "JL")
+		              	count = 1;
+		          }
+		     }
+
+		     return count;
+		}
+
+		function checkQuest2(){
+			var radios = document.getElementsByName("quest2");
+			var count = 0;
+			for (var i = 0, len = radios.length; i < len; i++) {
+		          if (radios[i].checked) {
+		              if(radios[i].value == "cobol")
+		              	count = 1;
+		          }
+		     }
+
+		     return count;
+		}
+
+		function checkQuest3(){
+			var radios = document.getElementsByName("quest3");
+			var count = 0;
+			for (var i = 0, len = radios.length; i < len; i++) {
+		          if (radios[i].checked) {
+		              if(radios[i].value == "apache")
+		              	count = 1;
+		          }
+		     }
+
+		     return count;
+		}
+
+		function checkQuest4(){
+			var input = document.getElementById("question4");
+			var answer = input.options[input.selectedIndex].value;
+
+			if(answer == "true")
+				return 1;
+			else
+				return 0;
+		}
+
+		function checkQuest5(){
+			var input = document.getElementById("question5");
+			var answer = input.options[input.selectedIndex].value;
+
+			if(answer == "false")
+				return 1;
+			else
+				return 0;
+		}
+
+		function checkQuest6(){
+			var input = document.getElementById("question6");
+			var answer = input.options[input.selectedIndex].value;
+
+			if(answer == "true")
+				return 1;
+			else
+				return 0;
+		}
+
+		function checkQuest7(){
+			var input = document.getElementById("question7").value;
+			if(input.toLowerCase() == "mysql")
+				return 1;
+			else
+				return 0;
+		}
+
+		function checkQuest8(){
+			var input = document.getElementById("question8").value;
+			if(input.toLowerCase() == "rails")
+				return 1;
+			else
+				return 0;
+		}
+
+		function checkQuest9(){
+			var input = document.getElementById("question9").value;
+			if(input.toLowerCase() == "controller")
+				return 1;
+			else
+				return 0;
 		}
 
 	</script>

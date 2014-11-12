@@ -15,24 +15,52 @@
 	<ol>
 		<li>How is the GET method different from POST when it comes HTML form submission?</li>
 		<ul>
-			<li>
+			<li>GET requests data from a specified source. POST submits data to a specified source. The get method also transfers data as name/value pairs as part of the URL.</li>
 		</ul>
 
 		<li>Identify several factors/reasons (min of 3 each) for choosing one method (GET/POST) over the other.</li>
 		<ul>
-			<li>
+			<li>One thing to keep in mind is whether or not its ok if the data being transfered is cached. GET caches the data, POST does not cache the data.</li>
+			<li>Another is whethere or not there is a restriction on data type. GET only allows ASCII characters, POST has not restrictions.</li>
+			<li>Another thing is how sensitive the data being transfered is. GET transfers the data as part of the URL, POST transfers it as part of the message body.</li>
 		</ul>
 
 		<li>What does it mean when one gets a HTTP status code in the range of 400-499? What about in the range of 500-599?</li>
 		<ul>
-			<li>
+			<li>HTTP status codes between 400 and 499 refer to errors in the request.</li>
+			<li>HTTP status codes between 500 and 599 refer to server errors.</li>
 		</ul>
 
 		<li>What does HTTP status code 403 mean? What about 404? What about 500?</li>
 		<ul>
-			<li>
+			<li>Error code 403 is used when the webserver has been configured to deny access. </li>
+			<li>Error code 404 is used when the webserver could not find what was being requested. </li>
+			<li>Error code 500 is an internal server error and is used when there was an error, but a specific message could not be given.</li>
 		</ul>
 	</ol>
+
+	<br><br>
+
+	<h1> LOGIN APP </h1>
+
+	<img src="good.png"><br><br>
+	<img src="valid.png"><br><br>
+	<img src="bad.png"><br><br>
+	<img src="invalid.png">
+
+	<br><br>
+
+	<h1>Amazon Silk Browser</h1>
+	<p>The Amazon Silk Browser is a mobile web browser designed to work on Amazon's Kindle Fire tablets.  How silk differs from most web browsers is that it takes advantage of Amazon's alread
+		massive cloud computing power they have with EC2.  The way it works is that the browser is split between the device and Amazon's EC2. The cloud has massive amounts of computing power, 
+		incredible access speeds to the internet, which allows it to render a page and optimize it for a particular device much quicker than it can on the device itself.  The webpages and their 
+		individual pieces can be cached on EC2 so that access to them are even faster.  In addition to this, Silk can also determine user patterns, e.g. if a person visits the same site often, or
+		if a series of sites are accessed in the same order regularly.  This allows Silk to precache the sites for the user, allowing even faster access to this.  There are pro's and con's to this. 
+		The obvious pro is that Silk allows webpages to be accessed quicker in an optimized fashion than if it were responsible for doing it on the mobile device all at once.  Additionally, as the 
+		size of screens is ever changing, Silk can is also more dynamic as it can be resized for any size screen.  However, the cons come with the actual EC2 instance.  Obviously, there will be 
+		more maintenance and infrastructure upkeep.  That EC2 instance being used for their web browser is one they could be selling to potential users instead.  Also, if there is a problem with EC2,
+		then everyone using the Silk browser would not have access.  This differs from if the device was responsible for rendering the webpage and encountering a problem, then only one user is affected.</p>
+
 
 </body>
 </html>

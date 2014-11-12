@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <head>
+        <title>Update Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body onload="#{loginController.checkIfLoggedIn()}">
+        <h3>Update Profile</h3>
+        <h:form>
+            User ID: <h:outputText id="usderidID" value="#{userController.theModel.userid}">
+            </h:outputText><br/>
+            First Name: <h:inputText id="fnameID" value="#{userController.theModel.firstName}">
+            <f:validateLength minimum="2" maximum="25"/> </h:inputText><br/>
+            Last Name: <h:inputText id="lnameID" value="#{userController.theModel.lastName}">
+            <f:validateLength minimum="2" maximum="25"/> </h:inputText><br/>
+            Password: <h:inputText id="passwordID" value="#{userController.theModel.password}">
+            <f:validateLength minimum="2" maximum="25"/> </h:inputText><br/>
+            Confirm Password: <h:inputText id="confirmID" value="#{userController.confirmPassword}">
+            <f:validateLength minimum="2" maximum="25"/> </h:inputText><br/>
+            Email: <h:inputText id="emailID" value="#{userController.theModel.email}">
+            <f:validateLength minimum="2" maximum="25"/></h:inputText><br/>
+            Security Question: <h:inputText id="questionID" value="#{userController.theModel.question}">
+            <f:validateLength minimum="2" maximum="25"/></h:inputText> <br/>
+            Answer: <h:inputText id="answerID" value="#{userController.theModel.answer}">
+            <f:validateLength minimum="2" maximum="25"/></h:inputText> <br/><br/>
+            
+            <h:commandButton id="submitID" value="Update" action="#{userController.updateThis()}"/>
+            <h:outputText value="#{userController.updateStatus}" id="updateStatus"/>
+        </h:form>
+    </body>
+</html>
