@@ -1,0 +1,20 @@
+Fri Nov 21 09:31:16 CST 2014 : Apache Derby Network Server - 10.10.2.0 - (1582446) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+Fri Nov 21 09:31:17 CST 2014:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-0149-d2fa-8fff-00001226d852 
+on database directory /Users/brando/dev/it353/NetBeansApps/dbs/DemoTime with class loader sun.misc.Launcher$AppClassLoader@5a07e868 
+Loaded from file:/Applications/NetBeans/glassfish-4.1/javadb/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_25-b17
+user.dir=/Applications/NetBeans/glassfish-4.1/javadb
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.9.4
+derby.system.home=/Users/brando/dev/it353/NetBeansApps/dbs
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Fri Nov 21 09:32:18 CST 2014: Shutting down Derby engine
+----------------------------------------------------------------
+Fri Nov 21 09:32:18 CST 2014:
+Shutting down instance a816c00e-0149-d2fa-8fff-00001226d852 on database directory /Users/brando/dev/it353/NetBeansApps/dbs/DemoTime with class loader sun.misc.Launcher$AppClassLoader@5a07e868 
+----------------------------------------------------------------
