@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h1>Schedule</h1><hr />
+        <h:dataTable id="scheduleTable" value="#{scheduleController.schedule}" var="aRow" border="1" cellpadding="2" cellspacing="0">
+            <h:column>
+                <f:facet name="header"><h:outputText value="Slot Index" /></f:facet>
+                <h:outputText value="#{aRow.id}" />
+            </h:column>
+            
+            <h:column>
+                <f:facet name="header"><h:outputText value="Slot Time" /></f:facet>
+                <h:outputText value="#{aRow.slotTime}" />
+            </h:column>
+            
+            <h:column>
+                <f:facet name="header"><h:outputText value="Group Name" /></f:facet>
+                <h:outputText value="#{aRow.groupName}" />
+            </h:column>
+        </h:dataTable>
+        
+        <h:form>
+            Input Group Name: <h:inputText id="groupName" value="#{scheduleController.groupName}"></h:inputText><br />
+        
+             Slot Time: 
+            <h:selectOneMenu value="#{scheduleController.index}" class="field-drop">
+                                <f:selectItem itemValue="1" itemLabel="2:00 - 2:10" />
+                                <f:selectItem itemValue="2" itemLabel="2:10 - 2:20" />
+                                <f:selectItem itemValue="3" itemLabel="2:20 - 2:30" />
+                                <f:selectItem itemValue="4" itemLabel="2:30 - 2:40" />
+                                <f:selectItem itemValue="5" itemLabel="2:40 - 2:50" />
+                                <f:selectItem itemValue="6" itemLabel="2:50 - 300" />
+                            </h:selectOneMenu><br/> 
+                            
+                            <h:commandButton id="submit" value="Submit" action="#{scheduleController.getResponse()}" />
+        </h:form>
+    </h:body>
+</html>
+
